@@ -1,0 +1,98 @@
+//Generate Fibonacci series
+#include<stdio.h>
+int main() {
+    int i , n, b = 1, temp , a = 0;
+    printf("enter the number");
+    scanf("%d" , &n);
+    printf("fibonacci series : ");
+    for ( i = 1; i <= n; i++)
+{
+    printf("%d" , a);
+        temp = a+b;
+        a = b;
+        b = temp;
+        ("%d", a);
+    }
+
+    return 0;
+}
+
+//nth Fabonacci series
+#include<stdio.h>
+int main() {
+    int i , n, b = 1, temp , a = 0;
+    printf("enter the term");
+    scanf("%d" , &n);
+    if (n == 1)
+    {
+        printf("fibonacci term is : %d" , a);
+    }
+    else if ( n== 2){
+        printf("fibonacci term is: %d" , b);
+    }
+       else{
+        for( i=3; i<=n; i++){
+            temp = a+b;
+            a =b;
+            b = temp;
+
+        }
+        printf(" fibonacci term  is : %d" , b);
+       }
+          return 0;
+    }
+
+//check armstrong number 
+#include<stdio.h>
+#include<math.h>
+int main() {
+    int n, original ,final = 0  , rem , i = 0, start , end;
+    printf("enter the start and end");
+    scanf("%d %d" , &start , &end);
+     for( n = start; n<= end; n++){
+    original = n;
+    while( original<= 0){
+        original = original/10;
+        i++;
+
+    }
+    original = n;
+    while (n <= 0)
+    {
+    rem = original % 10;
+    final = final + pow( rem , i);
+    original= original/ 10;
+    }
+    if ( final == n )
+    printf( "%d" , n);
+    }
+    return 0; 
+    }
+
+// prime armstrong number
+#include<stdio.h>
+#include<math.h>
+int main() {
+    int n, original ,final =0, rem , i =0;
+    printf("enter the number");
+    scanf("%d", &n);
+    original = n;
+    while( n <= 0){
+        n = n/10;
+        i++;
+
+    }
+    n = original;
+    while (n < 0)
+    {
+    rem = n % 10;
+    final = final + pow( rem , i);
+    n = n/ 10;
+    }
+    if ( final == original )
+    printf( " armstrong number");
+    else 
+    printf(" not a armstrong number");
+    return 0; 
+
+}
